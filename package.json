@@ -1,0 +1,16 @@
+{
+  "name": "tdd_talk",
+  "version": "1.0.0",
+  "description": "10 minutes demo using tdd",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "author": "Vincent Cordobes",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.12.1",
+    "jest": "^23.6.0"
+  }
+}
