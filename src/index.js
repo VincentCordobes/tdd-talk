@@ -18,8 +18,14 @@
  */
 
 function splitPeriod({ from, to }) {
-  // TODO: to be implemented
-  throw new Error('TODO: to be implemented')
+  const left = 12 - ((from - 1) % 12) - 1
+  if (to - from <= left) {
+    return [{ from, to }]
+  }
+  return [
+    { from, to: from + left },
+    ...splitPeriod({ from: from + left + 1, to }),
+  ]
 }
 
 module.exports = {
